@@ -38,6 +38,23 @@
 			}
 		},
 		{
+			"name": "eggs",
+			"photos": [
+				{
+					"file": "20240720_151332.jpg",
+					"alt": "A closed cardboard egg carton, for 6 eggs. Labelled \"Free range loose eggs\". Has a Lion Quality seal."
+				}
+			],
+			"pricePence": 150,
+			"brand": { "name": "Morissons" },
+			"egg": {
+				"species": "chicken",
+				"egg production": "free-range",
+				"size": "medium"
+			},
+			"quantityPieces": 6
+		},
+		{
 			"name": "cucumber",
 			"photos": [
 				{
