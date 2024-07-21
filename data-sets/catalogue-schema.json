@@ -50,72 +50,65 @@
 						"minimum": 0,
 						"multipleOf": 1
 					},
-					"metadata": {
+					"brand": {
 						"type": "object",
-						"title": "Additional Information",
 						"additionalProperties": false,
+						"title": "Consumer facing brand",
+						"description": "The name of the manufacturer associated with the product",
 						"properties": {
-							"brand": {
-								"type": "object",
-								"additionalProperties": false,
-								"title": "Consumer facing brand",
-								"description": "The name of the manufacturer associated with the product",
-								"properties": {
-									"name": {
-										"type": "string"
-									}
-								},
-								"required": ["name"]
-							},
-							"culinary vegetable": {
-								"type": "object",
-								"additionalProperties": false,
-								"description": "If this would be considered a vegetable in England",
-								"title": "Is a culinary vegetable"
-							},
-							"fruit": {
-								"type": "object",
-								"additionalProperties": false,
-								"description": "If this would be considered a fruit scientifically",
-								"title": "Is a fruit"
-							},
-							"packaging": {
-								"type": "object",
-								"additionalProperties": false,
-								"title": "Packaging of product",
-								"description": "What the product is packaged in. Can be left empty for no packaging",
-								"properties": {
-									"materials": {
-										"title": "Packaging materials",
-										"description": "The materials the product is packaged in",
-										"type": "array",
-										"uniqueItems": true,
-										"items": {
-											"type": "string",
-											"enum": ["plastic"]
-										}
-									}
-								},
-								"required": ["materials"]
-							},
-							"Nova Classification": {
-								"type": "object",
-								"additionalProperties": false,
-								"title": "Nova Classification of food processing",
-								"description": "Nova groups of food processing to categorise how processed the food is\nhttps://world.openfoodfacts.org/nova",
-								"properties": {
-									"category": {
-										"type": "number",
-										"minimum": 1,
-										"maximum": 4,
-										"multipleOf": 1,
-										"title": "Nova Category",
-										"description": "Category of processing\n1 - Unprocessed or minimally processed foods\n2 - Processed culinary ingredients\n3 - Processed foods\n4 - Ultra-processed foods\nhttps://world.openfoodfacts.org/nova"
-									}
-								},
-								"required": ["category"]
+							"name": {
+								"type": "string"
 							}
-						}
+						},
+						"required": ["name"]
+					},
+					"culinary vegetable": {
+						"type": "object",
+						"additionalProperties": false,
+						"description": "If this would be considered a vegetable in England",
+						"title": "Is a culinary vegetable"
+					},
+					"fruit": {
+						"type": "object",
+						"additionalProperties": false,
+						"description": "If this would be considered a fruit scientifically",
+						"title": "Is a fruit"
+					},
+					"packaging": {
+						"type": "object",
+						"additionalProperties": false,
+						"title": "Packaging of product",
+						"description": "What the product is packaged in. Can be left empty for no packaging",
+						"properties": {
+							"materials": {
+								"title": "Packaging materials",
+								"description": "The materials the product is packaged in",
+								"type": "array",
+								"uniqueItems": true,
+								"items": {
+									"type": "string",
+									"enum": ["plastic"]
+								}
+							}
+						},
+						"required": ["materials"]
+					},
+					"Nova Classification": {
+						"type": "object",
+						"additionalProperties": false,
+						"title": "Nova Classification of food processing",
+						"description": "Nova groups of food processing to categorise how processed the food is\nhttps://world.openfoodfacts.org/nova",
+						"properties": {
+							"category": {
+								"type": "number",
+								"minimum": 1,
+								"maximum": 4,
+								"multipleOf": 1,
+								"title": "Nova Category",
+								"description": "Category of processing\n1 - Unprocessed or minimally processed foods\n2 - Processed culinary ingredients\n3 - Processed foods\n4 - Ultra-processed foods\nhttps://world.openfoodfacts.org/nova"
+							}
+						},
+						"required": ["category"]
 					}
 				},
 				"required": ["name", "photos", "pricePence"]

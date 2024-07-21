@@ -10,16 +10,14 @@
 				}
 			],
 			"pricePence": 89,
-			"metadata": {
-				"brand": { "name": "Asda" },
-				"culinary vegetable": {},
-				"fruit": {},
-				"packaging": {
-					"materials": ["plastic"]
-				},
-				"Nova Classification": {
-					"category": 1
-				}
+			"brand": { "name": "Asda" },
+			"culinary vegetable": {},
+			"fruit": {},
+			"packaging": {
+				"materials": ["plastic"]
+			},
+			"Nova Classification": {
+				"category": 1
 			}
 		},
 		{
@@ -31,16 +29,14 @@
 				}
 			],
 			"pricePence": 89,
-			"metadata": {
-				"brand": { "name": "Morissons" },
-				"culinary vegetable": {},
-				"fruit": {},
-				"packaging": {
-					"materials": ["plastic"]
-				},
-				"Nova Classification": {
-					"category": 1
-				}
+			"brand": { "name": "Morissons" },
+			"culinary vegetable": {},
+			"fruit": {},
+			"packaging": {
+				"materials": ["plastic"]
+			},
+			"Nova Classification": {
+				"category": 1
 			}
 		}
 	]
