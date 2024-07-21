@@ -1,0 +1,123 @@
+{
+	"title": "Catalogue Schema",
+	"description": "A catalogue of grocery products",
+	"$schema": "https://json.schemastore.org/metaschema-draft-07-unofficial-strict.json",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"items": {
+			"type": "array",
+			"title": "Catalogue Items",
+			"description": "Items in the shop's catalogue",
+			"items": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"name": {
+						"type": "string",
+						"title": "Product Name",
+						"description": "The name of the product"
+					},
+					"photos": {
+						"title": "Product photos",
+						"description": "Photos of the product",
+						"type": "array",
+						"items": {
+							"type": "object",
+							"additionalProperties": false,
+							"properties": {
+								"file": {
+									"type": "string",
+									"title": "Photo file name",
+									"description": "File name of the photo within the photos directory"
+								},
+								"alt": {
+									"type": "string",
+									"title": "descriptive alternative text",
+									"description": "Text that conveys the photo for when the photo cannot be seen.\nhttps://accessibility.huit.harvard.edu/describe-content-images"
+								}
+							},
+							"required": ["file", "alt"]
+						}
+					},
+					"pricePence": {
+						"type": "number",
+						"title": "Price in pence",
+						"description": "The price of the product in pence for customers buying the prodcuct from this store. GBP1.50 (ie £1.50) would be inputted as 150.",
+						"minimum": 0,
+						"multipleOf": 1
+					},
+					"metadata": {
+						"type": "object",
+						"title": "Additional Information",
+						"additionalProperties": false,
+						"properties": {
+							"brand": {
+								"type": "object",
+								"additionalProperties": false,
+								"title": "Consumer facing brand",
+								"description": "The name of the manufacturer associated with the product",
+								"properties": {
+									"name": {
+										"type": "string"
+									}
+								},
+								"required": ["name"]
+							},
+							"culinary vegetable": {
+								"type": "object",
+								"additionalProperties": false,
+								"description": "If this would be considered a vegetable in England",
+								"title": "Is a culinary vegetable"
+							},
+							"fruit": {
+								"type": "object",
+								"additionalProperties": false,
+								"description": "If this would be considered a fruit scientifically",
+								"title": "Is a fruit"
+							},
+							"packaging": {
+								"type": "object",
+								"additionalProperties": false,
+								"title": "Packaging of product",
+								"description": "What the product is packaged in. Can be left empty for no packaging",
+								"properties": {
+									"materials": {
+										"title": "Packaging materials",
+										"description": "The materials the product is packaged in",
+										"type": "array",
+										"uniqueItems": true,
+										"items": {
+											"type": "string",
+											"enum": ["plastic"]
+										}
+									}
+								},
+								"required": ["materials"]
+							},
+							"Nova Classification": {
+								"type": "object",
+								"additionalProperties": false,
+								"title": "Nova Classification of food processing",
+								"description": "Nova groups of food processing to categorise how processed the food is\nhttps://world.openfoodfacts.org/nova",
+								"properties": {
+									"category": {
+										"type": "number",
+										"minimum": 1,
+										"maximum": 4,
+										"multipleOf": 1,
+										"title": "Nova Category",
+										"description": "Category of processing\n1 - Unprocessed or minimally processed foods\n2 - Processed culinary ingredients\n3 - Processed foods\n4 - Ultra-processed foods\nhttps://world.openfoodfacts.org/nova"
+									}
+								},
+								"required": ["category"]
+							}
+						}
+					}
+				},
+				"required": ["name", "photos", "pricePence"]
+			}
+		}
+	},
+	"required": ["items"]
+}

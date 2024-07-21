@@ -1,0 +1,47 @@
+{
+	"$schema": "./catalogue-schema.json",
+	"items": [
+		{
+			"name": "cucumber",
+			"photos": [
+				{
+					"file": "20240713_152421.jpg",
+					"alt": "Green cucumber in plastic wrap with Asda sticker"
+				}
+			],
+			"pricePence": 89,
+			"metadata": {
+				"brand": { "name": "Asda" },
+				"culinary vegetable": {},
+				"fruit": {},
+				"packaging": {
+					"materials": ["plastic"]
+				},
+				"Nova Classification": {
+					"category": 1
+				}
+			}
+		},
+		{
+			"name": "cucumber",
+			"photos": [
+				{
+					"file": "20240720_151500.jpg",
+					"alt": "Green cucumber in plastic wrap with sticker"
+				}
+			],
+			"pricePence": 89,
+			"metadata": {
+				"brand": { "name": "Morissons" },
+				"culinary vegetable": {},
+				"fruit": {},
+				"packaging": {
+					"materials": ["plastic"]
+				},
+				"Nova Classification": {
+					"category": 1
+				}
+			}
+		}
+	]
+}
