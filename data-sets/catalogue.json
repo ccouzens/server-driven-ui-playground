@@ -2,6 +2,23 @@
 	"$schema": "./catalogue-schema.json",
 	"items": [
 		{
+			"name": "eggs",
+			"photos": [
+				{
+					"file": "20240713_152315.jpg",
+					"alt": "A closed cardboard egg carton, for 6 medium eggs. Labelled \"the happy egg co\" and \"Vitality\"."
+				}
+			],
+			"pricePence": 220,
+			"brand": { "name": "The Happy Egg Co" },
+			"egg": {
+				"species": "chicken",
+				"egg production": "free-range",
+				"size": "medium"
+			},
+			"quantityPieces": 6
+		},
+		{
 			"name": "cucumber",
 			"photos": [
 				{

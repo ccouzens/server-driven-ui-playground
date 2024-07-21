@@ -109,6 +109,45 @@
 							}
 						},
 						"required": ["category"]
+					},
+					"egg": {
+						"type": "object",
+						"title": "Egg information",
+						"description": "Information applicable to eggs",
+						"additionalProperties": false,
+						"required": ["species", "egg production", "size"],
+						"properties": {
+							"species": {
+								"type": "string",
+								"title": "Egg species",
+								"description": "What species of bird laid the egg(s)",
+								"enum": ["chicken"]
+							},
+							"egg production": {
+								"type": "string",
+								"title": "Egg Production",
+								"description": "The living conditions of the birds",
+								"enum": [
+									"free-range",
+									"colony or enriched cages",
+									"barn",
+									"organic"
+								]
+							},
+							"size": {
+								"type": "string",
+								"title": "Egg size",
+								"description": "The egg size category",
+								"enum": ["small", "medium", "large"]
+							}
+						}
+					},
+					"quantityPieces": {
+						"type": "number",
+						"title": "Quantiy Pieces",
+						"description": "The count of items. Can be approximated.",
+						"exclusiveMinimum": 0,
+						"multipleOf": 1
 					}
 				},
 				"required": ["name", "photos", "pricePence"]
