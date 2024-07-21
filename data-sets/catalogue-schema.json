@@ -5,6 +5,9 @@
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
+		"$schema": {
+			"type": "string"
+		},
 		"items": {
 			"type": "array",
 			"title": "Catalogue Items",
